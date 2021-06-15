@@ -31,5 +31,14 @@ que no esta inicializada para registrar nuevamente undesifed*/
 /* Para evitar estos errores, debemos ser cuidadosos con la creación y definición de
 funciones, variables y entre otros tipos que son afectados por hoisting, lo mejor siempre
 es al crear una variable inicializarla y si va ser usada en alguna línea de código
-asegurarse de que este creada, también siempre crear las funciones y ordenar de forma
+asegurarse de que este creada y inicializada antes de ser llamada, también siempre 
+crear las funciones y ordenar de forma
 adecuada el uso de parametros y variables en cada función.*/
+
+var x = 1; // Inicializa x
+console.log(x + " " + y); // '1 undefined'
+var y = 2; // Inicializa y
+
+//Como se puede apreciar la elevación afecta la declaración de variables, pero no su 
+//inicialización. El valor será asignado exactamente cuando la sentencia de asignación 
+//sea alcanzada.

@@ -39,3 +39,25 @@ introduce un nuevo modelo de herencia orientado a objetos a JavaScript.” Class
 Sin embargo existen herramientas que si permiten trabajar JS dentro del paradigma de 
 orientación a objetos de forma mucho más adecuada, por ejemplo typescriptlang.
 Espero que esto sirva de ayuda para ampliar conocimientos y conceptos.*/
+
+//Usar objects con función constructura
+
+function auto(marca, modelo, annio){ //Creamos la función constructura con las características de un auto
+    this.marca = marca;
+    this.modelo = modelo;
+    this.annio = annio;
+}
+
+var autos = []; //En este arrays vamos a guardar todos los objetos de autos
+ 
+for(let i = 0 ; i < 3 ; i++){ //En este ciclo vamos a crear 3 objetos de autos con sus características pedidas
+    var marca = prompt("Ingresa la marca del auto");
+    var modelo = prompt("Ingresa el modelo del auto");
+    var annio = prompt("Ingresa el año del auto");
+    autos.push(new auto (marca, modelo, annio)); // de esta manera almacenamos cada objeto en nuestro arrays de objetos
+}
+
+for(let i = 0 ; i < autos.length ; i++){
+    console.log(autos[i]);
+}
+// Con este ciclo imprimimos nuestros objetos de autos

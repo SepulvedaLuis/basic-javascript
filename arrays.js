@@ -18,3 +18,31 @@ var borrarFruta = frutas.shift();//Con esto eliminamos el primer valor del array
 var posicion = frutas.indexOf("Plátano"); //Con esto nos busca la posición del elemento en el arrays
 
 
+//Meétodos de recorridos de Arrays
+
+var articulos = [
+    {nombre: "Bici", costo: 3000},
+    {nombre: "TV", costo: 2500},
+    {nombre: "Libro", costo: 320},
+    {nombre: "Celular", costo: 10000},
+    {nombre: "Laptop", costo: 20000},
+    {nombre: "Teclado", costo: 500},
+    {nombre: "Audifonos", costo: 1700}
+];
+
+var articulosFiltrados = articulos.filter(function(articulo){
+    return articulo.costo <= 500
+});
+
+articulosFiltrados;
+
+var nombreArticulo = articulos.map(function(articulo){
+    return articulo.nombre
+});
+
+nombreArticulo;
+
+/*FILTER(): retorna un nuevo array con los elementos que cumplen alguna condición, 
+los elementos no son modificados. 
+MAP(): retorna un nuevo array con los resultados de la función que le pasamos y 
+que es aplicada a cada uno de los elementos del array.*/

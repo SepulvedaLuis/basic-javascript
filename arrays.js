@@ -30,19 +30,44 @@ var articulos = [
     {nombre: "Audifonos", costo: 1700}
 ];
 
+//filter Genera un nuevo array
 var articulosFiltrados = articulos.filter(function(articulo){
     return articulo.costo <= 500
 });
 
 articulosFiltrados;
 
+//map Ayuda a mapear ciertos elementos de los articulos, es necesario generar nuevo 
+//array
 var nombreArticulo = articulos.map(function(articulo){
     return articulo.nombre
 });
 
 nombreArticulo;
 
+//find Ayuda a encontrar algo dentro del array articulos
+var encuentraArticulo = articulos.find(function(articulo){
+    return articulo.nombre === "Laptop";
+});
+
+//forEach No es necesario generar nuevo array, se utiliza para realizar un recorrido 
+//de un array principal
+articulos.forEach(function(articulo){
+    console.log(articulo.nombre);
+});
+
+//some Se genera nuevo array, regresa un condición en Boolean
+var articulosBaratos = articulos.some(function(articulo){
+    return articulo.costo <= 700;
+});
+
 /*FILTER(): retorna un nuevo array con los elementos que cumplen alguna condición, 
 los elementos no son modificados. 
 MAP(): retorna un nuevo array con los resultados de la función que le pasamos y 
 que es aplicada a cada uno de los elementos del array.*/
+
+/*find() : Devuelve el primer elemento del array que cumpla con la condición dada
+foreach() : Ejecuta lo que le definamos una vez por cada elemento de nuestro array
+some() : Comprueba si al menos un elemento del array cumple con la condición que le damos
+filter() : Devuelve todos los elementos del array que cumplan con la condición dada
+*/
